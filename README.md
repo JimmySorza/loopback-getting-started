@@ -1,9 +1,14 @@
 # loopback-getting-started
 tutorial que  recorre los pasos iniciales para crear una aplicación básica de LoopBack
 
-Crea una API simple
-Use API Explorer
-Conecte su API a una fuente de datos
-Extiende tu API
-Agregar una página web estática
-Agregue una ruta Express personalizada
+Creacion de una API simple
+
+Uso de API Explorer
+
+Conexion de la API a una fuente de datos
+
+Extencion de la API
+
+Se Agrega una página web estática
+
+Se Agrega una ruta Express personalizada
