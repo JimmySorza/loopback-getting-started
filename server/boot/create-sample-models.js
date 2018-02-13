@@ -8,13 +8,13 @@ module.exports = function(app) {
   async.parallel({
     reviewers: async.apply(createReviewers),
     coffeeShops: async.apply(createCofeeShops),
-  }, function (err, results) {
-      if (err) throw err;
-      createReviewers(results.reviewers, results.cofeeShops, function (err) {
-        console.log('> Modelos creados exitosamente');
-      });
+  }, function(err, results) {
+    if (err) throw err;
+    createReviewers(results.reviewers, results.cofeeShops, function(err) {
+      console.log('> Modelos creados exitosamente');
+    });
   });
-  //create reviewers
+  // create reviewers
   function createReviewers(cb) {
     mongoDs.automigrate('Reviewer', function(err) {
       if (err) return cb(err);
@@ -33,9 +33,9 @@ module.exports = function(app) {
   }
   // create coffee shops
   function createCofeeShops(cb) {
-    mysqlDs.automigrate('CofeeShop', function(err){
+    mysqlDs.automigrate('CofeeShop', function(err) {
       if (err) throw cb(err);
-      var CofeeShop = app.models.CofeeShops;
+      var CofeeShop = app.models.CofeeShop;
       CofeeShop.create([{
         name: 'Juan',
         city: 'Cali',
@@ -45,11 +45,7 @@ module.exports = function(app) {
       }, {
         name: 'Jose',
         city: 'Medellín',
-      }], function(err, cofeeShops){
-        if (err) throw err;
-
-        console.log('Models created: \n', cofeeShops);
-      });
+      },], cb);
     });
   }
   // create reviews
