@@ -15,7 +15,7 @@
     "cors": "^2.5.2",
     "helmet": "^3.10.0",
     "loopback": "^3.0.0",
-    "loopback-boot": "^2.6.5",
+    "loopback-boot": "^3.0.0",
     "loopback-component-explorer": "^6.0.0",
     "loopback-connector-mongodb": "^4.0.0",
     "loopback-connector-mysql": "^5.0.0",
